@@ -193,3 +193,86 @@ footer ol li a:hover {
 footer small {
   font-size: 11px;
 }
+
+/* التصميم الأساسي موجود بالفعل، نضيف التعديلات أدناه */
+
+/* الشاشات الكبيرة (أجهزة الكمبيوتر المكتبية) */
+@media (min-width: 1024px) {
+  .row {
+    flex-direction: row;
+  }
+
+  .col-logo {
+    text-align: left;
+  }
+
+  .col-form {
+    text-align: center;
+  }
+}
+
+/* الشاشات المتوسطة (الأجهزة اللوحية) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col-logo {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .col-form {
+    width: 80%;
+  }
+
+  .col-form .form-container {
+    width: 100%;
+  }
+}
+
+/* الشاشات الصغيرة (الموبايلات) */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col-logo img {
+    max-width: 200px;
+  }
+
+  .col-logo h2 {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 0 10px;
+  }
+
+  .col-form .form-container {
+    width: 90%;
+  }
+
+  .col-form .form-container input,
+  .col-form .form-container .btn-login,
+  .col-form .form-container .btn-new {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  footer ol {
+    display: block;
+    text-align: center;
+  }
+
+  footer ol li {
+    display: inline-block;
+    margin: 5px;
+  }
+
+  footer small {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+  }
+}
